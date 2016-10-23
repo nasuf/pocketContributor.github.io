@@ -139,6 +139,24 @@
         
             <ul class="sidebar-buttons">
             
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/pocketContributor" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="mailto:842100455@qq.com" target="_blank">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
         </ul>
         
             <ul class="sidebar-buttons">
@@ -175,13 +193,13 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
-                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Exception/">
-                            PL/SQL (Exception)
+                        <a class="link-unstyled" href="/2016/10/23/Oracle-User-Management/">
+                            Oracle User Management
                         </a>
                     
                 </h1>
                 <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-23T12:01:32+08:00">
+    <time itemprop="datePublished" datetime="2016-10-23T23:45:05+08:00">
 	
 		    Oct 23, 2016
     	
@@ -192,13 +210,90 @@
             </div>
             
                 <div class="postShorten-content" itemprop="articleBody">
-                    <h5 id="toc_0">PL/SQL编程（Exception）</h5>
+                    <a id="more"></a>
+<h5 id="toc_1">创建用户</h5>
 
-<h6 id="toc_1">1）处理sql异常</h6>
+<p><code>create user c##mldnuser<br><br>identified by java_android<br><br>default tablespace mldn_data<br><br>temporary tablespace mldn_temp<br><br>quota 30M on mldn_data<br><br>quota 20M on users<br><br>account unlock<br><br>password expire;</code></p>
 
-<p><img src="/imgs/14771070082709/14771070603795.jpg" alt="">￼</p>
+<h5 id="toc_2">配置说明：</h5>
 
-<h6 id="toc_2">2）使用others捕获所有异常</h6>
+<p><code><strong>default tablespace mldn_data</strong>: 该用户默认使用的表空间；如果用户在创建数据库对象时没有指定表空间，则默认使用mldn_data表空间存储；<br><br><strong>tempporary tablespace mldn_temp</strong>: 该用户使用order by 或者group by 子句存储量过大时保存的临时表空间；<br><br><strong>quota 30M on mldn_data</strong>: 该用户在mldn_data表空间上最多使用30MB大小；<br><br><strong>quota 20M on users</strong>: 该用户在users表空间上最多使用20MB大小；<br><br><strong>account unlock</strong>: 该用户默认为活动账户；<br><br><strong>password expire</strong>: 用户登录后需要强制用户修改密码；</code></p>
+
+<h5 id="toc_3">查看用户信息</h5>
+
+<p><code>select username,user_id,default_tablespace,temporary_tablespace,created,lock_date,profile from dba_users where username=&#39;c##mldnuser&#39;;</code></p>
+
+<h5 id="toc_4">修改用户密码</h5>
+
+<p><code>alter user c##mldnuser identified by hellojava;</code></p>
+
+<h5 id="toc_5">控制用户锁定</h5>
+
+<p><code>alter user c##mldnuser account lock;</code></p>
+
+<h5 id="toc_6">让用户密码失效</h5>
+
+<p><code>alter user c##mldnuser password expire;</code></p>
+
+<h5 id="toc_7">删除用户</h5>
+
+<p><code>drop user c##mldnuser;</code></p>
+
+<h5 id="toc_8">为用户授权</h5>
+
+<p><code>grant create session to c##mldnuser;<br><br>grant create table, create sequence, create view to c##mldnuser with admin option;  #with admin option子句表示该用户可以将其权限授予其他用户；</code></p>
+
+<h5 id="toc_9">查询用户权限</h5>
+
+<p><code>select * from dba_sys_privs where grantee in (&#39;c##mldnuser&#39;) order by grantee desc;</code></p>
+
+<h5 id="toc_10">撤销用户权限</h5>
+
+<p><code>revoke create table, create view from c##mldnuser;</code></p>
+
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2016/10/23/Oracle-User-Management/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Exception/">
+                            PL/SQL(Exception)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-23T23:36:50+08:00">
+	
+		    Oct 23, 2016
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <a id="more"></a>
+<h6 id="toc_1">1）处理sql异常</h6><br><p><img src="/imgs/14771070082709/14771070603795.jpg" alt="">￼</p><br><br><h6 id="toc_2">2）使用others捕获所有异常</h6>
 
 <p><img src="/imgs/14771070082709/14771074180886.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771074527073.jpg" alt="">￼</p>
 
@@ -216,7 +311,7 @@
 
 <h6 id="toc_6">构建动态异常</h6>
 
-<p><img src="/imgs/14771070082709/14771088687045.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771088893755.jpg" alt="">￼</p>
+<p><img src="media/14771070082709/14771088687045.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771088893755.jpg" alt="">￼</p>
 
 <p><code>如果此时捕获的不是异常变量，而使用others操作的话，那么即使不编写PRAGMA EXCEPTION_INIT(v_myexp,-20789);也没有问题：</code><br><br><img src="/imgs/14771070082709/14771092340708.jpg" alt="">￼</p>
 
@@ -246,13 +341,13 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
-                        <a class="link-unstyled" href="/2016/10/23/PL-SQL/">
-                            PL/SQL
+                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Data-Type/">
+                            PL/SQL (Data Type)
                         </a>
                     
                 </h1>
                 <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-23T11:45:21+08:00">
+    <time itemprop="datePublished" datetime="2016-10-23T23:20:32+08:00">
 	
 		    Oct 23, 2016
     	
@@ -263,39 +358,38 @@
             </div>
             
                 <div class="postShorten-content" itemprop="articleBody">
-                    <h5 id="toc_0">PL/SQL编程（数据类型与声明）</h5>
-
-<h6 id="toc_1">1）%ROWTYPE声明变量类型</h6>
+                    <a id="more"></a>
+<h6 id="toc_1">%ROWTYPE声明变量类型</h6>
 
 <p><code>将表中的一行记录设置到了ROWTYPE类型的变量中，并可以利用‘rowtype 变量.表字段’的方式取得表中每行的对应列的数据：</code><br><br><img src="/imgs/14767177479457/14767179352048.jpg" alt="">￼</p>
 
-<h5 id="toc_2">2）%TYPE声明变量类型</h5>
+<h5 id="toc_2">%TYPE声明变量类型</h5>
 
 <p><code>声明某个变量与指定数据表中的某一列的数据类型一样，使用‘变量定义 表名称.字段名称%TYPE&#39;的格式：</code><br><br><img src="/imgs/14767177479457/14767186098179.jpg" alt="">￼</p>
 
-<h5 id="toc_3">3）运算符</h5>
+<h5 id="toc_3">运算符</h5>
 
 <p><img src="/imgs/14767177479457/14767190183039.jpg" alt="">￼</p>
 
-<h5 id="toc_4">4）数据类型</h5>
+<h5 id="toc_4">数据类型</h5>
 
-<h6 id="toc_5">1&gt; NUMBER</h6>
+<h6 id="toc_5">NUMBER</h6>
 
 <p><code>NUMBER可以定义整形NUMBER(n), 也可以定义浮点型NUMBER(n,m)，后者表示一共有n位，其中m位小数；</code></p>
 
-<h6 id="toc_6">2&gt; BINARY_INTEGER &amp; PLS_INTEGER</h6>
+<h6 id="toc_6">BINARY_INTEGER &amp; PLS_INTEGER</h6>
 
 <p><code>两者采用二进制的补码形式存储，而NUMBER采用十进制进行存储，使用时先转为二进制再进行计算，所以前者比NUMBER性能更高；</code></p>
 
-<h6 id="toc_7">3&gt; BINARY_FLOAT &amp; BINARY_DOUBLE</h6>
+<h6 id="toc_7">BINARY_FLOAT &amp; BINARY_DOUBLE</h6>
 
 <p><code>Oracle 10g后引入，比NUMBER节约空间，表示的范围更大，直接采用二进制方式存储；声明方式：<br><br>    v_float BINARY_FLOAT := 8909.82F;<br><br>    v_double BINARY_DOUBLE := 92884.23D;</code></p>
 
-<h6 id="toc_8">4&gt; CHAR &amp; VARCHAR2</h6>
+<h6 id="toc_8">CHAR &amp; VARCHAR2</h6>
 
 <p><code>CHAR类型使用定长方式保存字符串，如果用户为其设置的内容不足其定义长度，则会自动补充空格；VARCHAR2是变长字符串，如果为其设置的内容不足其长度，不会为其补充内容；</code></p>
 
-<h6 id="toc_9">5&gt; NCHAR &amp; NVARCHAR2</h6>
+<h6 id="toc_9">NCHAR &amp; NVARCHAR2</h6>
 
 <p><code>两者操作特点与CHAR和VARCHAR2一样，只是两者保存的数据为UNICODE编码，即中文或英文都会变为十六进制编码保存。使用UNICODE编码的方便之处是统一了字符与汉字的长度，每一位中文都只占一位；但同时，由于所有的字母都会按照十六进制保存，所以在某种程度上讲也会浪费空间；</code></p>
 
@@ -305,7 +399,7 @@
                     
                     
                         <p>
-                            <a href="/2016/10/23/PL-SQL/#post-footer" class="postShorten-excerpt_link link">
+                            <a href="/2016/10/23/PL-SQL-Data-Type/#post-footer" class="postShorten-excerpt_link link">
                                 Comment and share
                             </a>
                         </p>
@@ -403,8 +497,8 @@
                 <div class="media">
                     
                     <div class="media-body">
-                        <a class="link-unstyled" href="http://yoursite.com/2016/10/23/PL-SQL/">
-                            <h3 class="media-heading">PL/SQL</h3>
+                        <a class="link-unstyled" href="http://yoursite.com/2016/10/23/PL-SQL-Data-Type/">
+                            <h3 class="media-heading">PL/SQL (Data Type)</h3>
                         </a>
                         <span class="media-meta">
                             <span class="media-date text-small">
@@ -423,7 +517,26 @@
                     
                     <div class="media-body">
                         <a class="link-unstyled" href="http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                            <h3 class="media-heading">PL/SQL (Exception)</h3>
+                            <h3 class="media-heading">PL/SQL(Exception)</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 23, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2016/10/23/Oracle-User-Management/">
+                            <h3 class="media-heading">Oracle User Management</h3>
                         </a>
                         <span class="media-meta">
                             <span class="media-date text-small">
@@ -445,7 +558,7 @@
                 data-message-zero="no post found"
                 data-message-one="1 post found"
                 data-message-other="{n} posts found">
-                3 posts found
+                4 posts found
             </p>
         </div>
     </div>

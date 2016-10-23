@@ -6,51 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hexo">
-    <title>PL/SQL(Exception) - Hexo</title>
+    <title>Tag: pl/sql - Hexo</title>
     <meta name="author" content="John Doe">
     
     
     
-    <meta name="description" content="1）处理sql异常￼2）使用others捕获所有异常
-
-￼￼
-
-3）用户自定义异常
-
-方式一：在声明块中声明EXCEPTION对象，此方式有两种选择：1&amp;gt; 声明异常对象并用名称来引用它，此方式使用普遍的others异常捕获用户定义的异常；2&amp;gt;声明异常对象并将它与有效的Oracle错误代码映射，需要编写单独的WHEN语句块捕获。方式二：在执行块中构建动态异常，通过RAISE_APPLI">
-<meta property="og:type" content="blog">
-<meta property="og:title" content="PL/SQL(Exception)">
-<meta property="og:url" content="http://yoursite.com/2016/10/23/PL-SQL-Exception/index.html">
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/tags/pl-sql/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1）处理sql异常￼2）使用others捕获所有异常
-
-￼￼
-
-3）用户自定义异常
-
-方式一：在声明块中声明EXCEPTION对象，此方式有两种选择：1&amp;gt; 声明异常对象并用名称来引用它，此方式使用普遍的others异常捕获用户定义的异常；2&amp;gt;声明异常对象并将它与有效的Oracle错误代码映射，需要编写单独的WHEN语句块捕获。方式二：在执行块中构建动态异常，通过RAISE_APPLI">
-<meta property="og:image" content="http://yoursite.com/imgs/14771070082709/14771070603795.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/14771070082709/14771074180886.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/14771070082709/14771074527073.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/14771070082709/14771082553188.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/14771070082709/14771082812057.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/14771070082709/14771085714394.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/14771070082709/14771085849106.jpg">
-<meta property="og:image" content="http://yoursite.com/media/14771070082709/14771088687045.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/14771070082709/14771088893755.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/14771070082709/14771092340708.jpg">
-<meta property="og:image" content="http://yoursite.com/imgs/14771070082709/14771091219240.jpg">
-<meta property="og:updated_time" content="2016-10-23T15:51:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PL/SQL(Exception)">
-<meta name="twitter:description" content="1）处理sql异常￼2）使用others捕获所有异常
-
-￼￼
-
-3）用户自定义异常
-
-方式一：在声明块中声明EXCEPTION对象，此方式有两种选择：1&amp;gt; 声明异常对象并用名称来引用它，此方式使用普遍的others异常捕获用户定义的异常；2&amp;gt;声明异常对象并将它与有效的Oracle错误代码映射，需要编写单独的WHEN语句块捕获。方式二：在执行块中构建动态异常，通过RAISE_APPLI">
-<meta name="twitter:image" content="http://yoursite.com/imgs/14771070082709/14771070603795.jpg">
+<meta name="twitter:title" content="Hexo">
     
     
         
@@ -73,7 +39,7 @@
 
     
 
-<header id="header" data-behavior="4">
+<header id="header" data-behavior="1">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">Hexo</a>
@@ -91,7 +57,7 @@
             <!-- Define author's picture -->
 
 
-<nav id="sidebar" data-behavior="4">
+<nav id="sidebar" data-behavior="1">
     <div class="sidebar-container">
         
         
@@ -213,21 +179,26 @@
 </nav>
 
             
-            <div id="main" data-behavior="4"
+            <div id="main" data-behavior="1"
                  class="
                         hasCoverMetaIn
                         ">
                 
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    <section class="postShorten-group main-content-wrap">
     
     
-        <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            PL/SQL(Exception)
-        </h1>
-    
-    <div class="post-meta">
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Exception/">
+                            PL/SQL(Exception)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
     <time itemprop="datePublished" datetime="2016-10-23T23:36:50+08:00">
 	
 		    Oct 23, 2016
@@ -236,11 +207,10 @@
     
 </div>
 
-</div>
-    
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
-            <a id="more"></a>
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <a id="more"></a>
 <h6 id="toc_1">1）处理sql异常</h6><br><p><img src="/imgs/14771070082709/14771070603795.jpg" alt="">￼</p><br><br><h6 id="toc_2">2）使用others捕获所有异常</h6>
 
 <p><img src="/imgs/14771070082709/14771074180886.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771074527073.jpg" alt="">￼</p>
@@ -266,78 +236,107 @@
 <p><img src="/imgs/14771070082709/14771091219240.jpg" alt="">￼</p>
 
 
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2016/10/23/PL-SQL-Exception/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
             
         </div>
-    </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
         
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">TAGGED IN</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/oracle/">oracle</a> <a class="tag tag--primary tag--small t-link" href="/tags/pl-sql/">pl/sql</a>
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Data-Type/">
+                            PL/SQL (Data Type)
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-23T23:20:32+08:00">
+	
+		    Oct 23, 2016
+    	
+    </time>
+    
+</div>
 
             </div>
-        
-        <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/23/Oracle-User-Management/"  data-tooltip="Oracle User Management">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/23/PL-SQL-Data-Type/" data-tooltip="PL/SQL (Data Type)">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
-        
-        <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#">
+                <div class="postShorten-content" itemprop="articleBody">
+                    <a id="more"></a>
+<h6 id="toc_1">%ROWTYPE声明变量类型</h6>
+
+<p><code>将表中的一行记录设置到了ROWTYPE类型的变量中，并可以利用‘rowtype 变量.表字段’的方式取得表中每行的对应列的数据：</code><br><br><img src="/imgs/14767177479457/14767179352048.jpg" alt="">￼</p>
+
+<h5 id="toc_2">%TYPE声明变量类型</h5>
+
+<p><code>声明某个变量与指定数据表中的某一列的数据类型一样，使用‘变量定义 表名称.字段名称%TYPE&#39;的格式：</code><br><br><img src="/imgs/14767177479457/14767186098179.jpg" alt="">￼</p>
+
+<h5 id="toc_3">运算符</h5>
+
+<p><img src="/imgs/14767177479457/14767190183039.jpg" alt="">￼</p>
+
+<h5 id="toc_4">数据类型</h5>
+
+<h6 id="toc_5">NUMBER</h6>
+
+<p><code>NUMBER可以定义整形NUMBER(n), 也可以定义浮点型NUMBER(n,m)，后者表示一共有n位，其中m位小数；</code></p>
+
+<h6 id="toc_6">BINARY_INTEGER &amp; PLS_INTEGER</h6>
+
+<p><code>两者采用二进制的补码形式存储，而NUMBER采用十进制进行存储，使用时先转为二进制再进行计算，所以前者比NUMBER性能更高；</code></p>
+
+<h6 id="toc_7">BINARY_FLOAT &amp; BINARY_DOUBLE</h6>
+
+<p><code>Oracle 10g后引入，比NUMBER节约空间，表示的范围更大，直接采用二进制方式存储；声明方式：<br><br>    v_float BINARY_FLOAT := 8909.82F;<br><br>    v_double BINARY_DOUBLE := 92884.23D;</code></p>
+
+<h6 id="toc_8">CHAR &amp; VARCHAR2</h6>
+
+<p><code>CHAR类型使用定长方式保存字符串，如果用户为其设置的内容不足其定义长度，则会自动补充空格；VARCHAR2是变长字符串，如果为其设置的内容不足其长度，不会为其补充内容；</code></p>
+
+<h6 id="toc_9">NCHAR &amp; NVARCHAR2</h6>
+
+<p><code>两者操作特点与CHAR和VARCHAR2一样，只是两者保存的数据为UNICODE编码，即中文或英文都会变为十六进制编码保存。使用UNICODE编码的方便之处是统一了字符与汉字的长度，每一位中文都只占一位；但同时，由于所有的字母都会按照十六进制保存，所以在某种程度上讲也会浪费空间；</code></p>
+
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2016/10/23/PL-SQL-Data-Type/#post-footer" class="postShorten-excerpt_link link">
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
             
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-number">page 1 of 1</li>
     </ul>
 </div>
 
-
-        
-            
-        
-    </div>
-</article>
-
+</section>
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -347,84 +346,6 @@
 </footer>
 
             </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/23/Oracle-User-Management/"  data-tooltip="Oracle User Management">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/23/PL-SQL-Data-Type/" data-tooltip="PL/SQL (Data Type)">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                <i class="fa fa-google-plus"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                <i class="fa fa-facebook-official"></i>
-            </a>
-        </li>
-        <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                <i class="fa fa-twitter"></i>
-            </a>
-        </li>
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-    <ul class="share-options">
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
-            </a>
-        </li>
-        <li class="share-option">
-            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
-            </a>
-        </li>
-    </ul>
-</div>
-<div id="share-options-mask" class="share-options-mask"></div>
-
             
         </div>
         
@@ -565,8 +486,6 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
 <!--SCRIPTS END-->
-
-    
 
 
 
