@@ -62,6 +62,73 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2016-10-23T04:01:32.000Z"><a href="/2016/10/23/PL-SQL-Exception/">2016-10-23</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2016/10/23/PL-SQL-Exception/">PL/SQL (Exception)</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h5 id="toc_0">PL/SQL编程（Exception）</h5>
+
+<h6 id="toc_1">1）处理sql异常</h6>
+
+<p><img src="/imgs/14771070082709/14771070603795.jpg" alt="">￼</p>
+
+<h6 id="toc_2">2）使用others捕获所有异常</h6>
+
+<p><img src="/imgs/14771070082709/14771074180886.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771074527073.jpg" alt="">￼</p>
+
+<h6 id="toc_3">3）用户自定义异常</h6>
+
+<p><code>方式一：在声明块中声明EXCEPTION对象，此方式有两种选择：<br><br>1&gt; 声明异常对象并用名称来引用它，此方式使用普遍的others异常捕获用户定义的异常；<br><br>2&gt;声明异常对象并将它与有效的Oracle错误代码映射，需要编写单独的WHEN语句块捕获。<br><br>方式二：在执行块中构建动态异常，通过RAISE_APPLICATION_ERROR函数可以构建动态异常。在触发动态异常时，可使用-20000 ~ -20999范围的数字。如果使用动态异常，可以在运行时指派错误消息。</code></p>
+
+<h6 id="toc_4">基本方式</h6>
+
+<p><img src="/imgs/14771070082709/14771082553188.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771082812057.jpg" alt="">￼<br><br><code>在默认情况下，所有用户定义的异常都只有一个SQLCODE，其内容为1,另外用户自定义异常尚未设置异常名称，所以错误信息显示内容为User-Defined Exception</code></p>
+
+<h6 id="toc_5">为自定义异常设置代码</h6>
+
+<p><img src="/imgs/14771070082709/14771085714394.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771085849106.jpg" alt="">￼</p>
+
+<h6 id="toc_6">构建动态异常</h6>
+
+<p><img src="/imgs/14771070082709/14771088687045.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771088893755.jpg" alt="">￼</p>
+
+<p><code>如果此时捕获的不是异常变量，而使用others操作的话，那么即使不编写PRAGMA EXCEPTION_INIT(v_myexp,-20789);也没有问题：</code><br><br><img src="/imgs/14771070082709/14771092340708.jpg" alt="">￼</p>
+
+<p><img src="/imgs/14771070082709/14771091219240.jpg" alt="">￼</p>
+
+
+      
+    </div>
+    
+    <footer>
+        <div class="alignright">
+          
+          <a href='javascript:void(0)' class="share-link bdsharebuttonbox" data-cmd="more">分享</a>
+        </div>
+        
+        
+        <!-- partial('post/share') -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2016-10-23T03:45:21.000Z"><a href="/2016/10/23/PL-SQL/">2016-10-23</a></time>
       
       
@@ -194,6 +261,10 @@
 <div class="widget tag">
   <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
+    
+      <li>
+        <a href="/2016/10/23/PL-SQL-Exception/">PL/SQL (Exception)</a>
+      </li>
     
       <li>
         <a href="/2016/10/23/PL-SQL/">PL/SQL</a>
