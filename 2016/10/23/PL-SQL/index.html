@@ -3,16 +3,26 @@
 <head>
   <meta charset="utf-8" />
   
-  <title>My New Post | Hexo</title>
+  <title>PL/SQL | Hexo</title>
   <meta name="author" content="John Doe" />
 
+  
+  <meta name="description" content="PL/SQL编程（数据类型与声明）
+
+1）%ROWTYPE声明变量类型
+
+将表中的一行记录设置到了ROWTYPE类型的变量中，并可以利用‘rowtype 变量.表字段’的方式取得表中每行的对应列的数据：￼
+
+2）%TYPE声明变量类型
+
+声明某个变量与指定数据表中的某一列的数据类型一样，使用‘变量定" />
   
 
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <meta property="og:title" content="My New Post" />
+  <meta property="og:title" content="PL/SQL" />
   <meta property="og:site_name" content="Hexo" />
 
   
@@ -61,17 +71,53 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2016-10-22T13:40:26.000Z"><a href="/2016/10/22/My-New-Post/">2016-10-22</a></time>
+        <time datetime="2016-10-23T03:45:21.000Z"><a href="/2016/10/23/PL-SQL/">2016-10-23</a></time>
       
       
   
-    <h1 class="title">My New Post</h1>
+    <h1 class="title">PL/SQL</h1>
   
 
     </header>
     <div class="entry">
       
-        
+        <h5 id="toc_0">PL/SQL编程（数据类型与声明）</h5>
+
+<h6 id="toc_1">1）%ROWTYPE声明变量类型</h6>
+
+<p><code>将表中的一行记录设置到了ROWTYPE类型的变量中，并可以利用‘rowtype 变量.表字段’的方式取得表中每行的对应列的数据：</code><br><br><img src="/imgs/14767177479457/14767179352048.jpg" alt="">￼</p>
+
+<h5 id="toc_2">2）%TYPE声明变量类型</h5>
+
+<p><code>声明某个变量与指定数据表中的某一列的数据类型一样，使用‘变量定义 表名称.字段名称%TYPE&#39;的格式：</code><br><br><img src="/imgs/14767177479457/14767186098179.jpg" alt="">￼</p>
+
+<h5 id="toc_3">3）运算符</h5>
+
+<p><img src="/imgs/14767177479457/14767190183039.jpg" alt="">￼</p>
+
+<h5 id="toc_4">4）数据类型</h5>
+
+<h6 id="toc_5">1&gt; NUMBER</h6>
+
+<p><code>NUMBER可以定义整形NUMBER(n), 也可以定义浮点型NUMBER(n,m)，后者表示一共有n位，其中m位小数；</code></p>
+
+<h6 id="toc_6">2&gt; BINARY_INTEGER &amp; PLS_INTEGER</h6>
+
+<p><code>两者采用二进制的补码形式存储，而NUMBER采用十进制进行存储，使用时先转为二进制再进行计算，所以前者比NUMBER性能更高；</code></p>
+
+<h6 id="toc_7">3&gt; BINARY_FLOAT &amp; BINARY_DOUBLE</h6>
+
+<p><code>Oracle 10g后引入，比NUMBER节约空间，表示的范围更大，直接采用二进制方式存储；声明方式：<br><br>    v_float BINARY_FLOAT := 8909.82F;<br><br>    v_double BINARY_DOUBLE := 92884.23D;</code></p>
+
+<h6 id="toc_8">4&gt; CHAR &amp; VARCHAR2</h6>
+
+<p><code>CHAR类型使用定长方式保存字符串，如果用户为其设置的内容不足其定义长度，则会自动补充空格；VARCHAR2是变长字符串，如果为其设置的内容不足其长度，不会为其补充内容；</code></p>
+
+<h6 id="toc_9">5&gt; NCHAR &amp; NVARCHAR2</h6>
+
+<p><code>两者操作特点与CHAR和VARCHAR2一样，只是两者保存的数据为UNICODE编码，即中文或英文都会变为十六进制编码保存。使用UNICODE编码的方便之处是统一了字符与汉字的长度，每一位中文都只占一位；但同时，由于所有的字母都会按照十六进制保存，所以在某种程度上讲也会浪费空间；</code></p>
+
+
       
     </div>
     
@@ -94,7 +140,7 @@
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Buscar">
+    <input type="search" name="q" results="0" placeholder="Suche">
     <input type="hidden" name="q" value="site:yoursite.com">
   </form>
 </div>
@@ -103,11 +149,11 @@
 
   
 <div class="widget tag">
-  <h3 class="title">Entradas Recientes</h3>
+  <h3 class="title">Neueste Artikel</h3>
   <ul class="entry">
     
       <li>
-        <a href="/2016/10/22/My-New-Post/">My New Post</a>
+        <a href="/2016/10/23/PL-SQL/">PL/SQL</a>
       </li>
     
       <li>
