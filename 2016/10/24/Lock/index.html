@@ -6,17 +6,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hexo">
-    <title>Tag: pl/sql - Hexo</title>
+    <title>Lock - Hexo</title>
     <meta name="author" content="John Doe">
     
     
     
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/pl-sql/index.html">
+    <meta name="description" content="锁定的几种常见模式
+
+
+ROW SHARE: 行共享锁，在锁定期间允许其他事物并发对表进行各种操作， 但不允许任何事务对同一张表进行独占操作（禁止排他锁）；
+ROW EXCLUSIVE: 行排他锁，允许用户进行任何操作， 与行共享锁不同的是，它不能防止其他事务对同一张表进行手工锁定或独占操作；
+SHARE: 共享锁，其他事务只允许执行查询操作，不能执行修改操作；
+SHARE ROW EXCLUSI">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Lock">
+<meta property="og:url" content="http://yoursite.com/2016/10/24/Lock/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="锁定的几种常见模式
+
+
+ROW SHARE: 行共享锁，在锁定期间允许其他事物并发对表进行各种操作， 但不允许任何事务对同一张表进行独占操作（禁止排他锁）；
+ROW EXCLUSIVE: 行排他锁，允许用户进行任何操作， 与行共享锁不同的是，它不能防止其他事务对同一张表进行手工锁定或独占操作；
+SHARE: 共享锁，其他事务只允许执行查询操作，不能执行修改操作；
+SHARE ROW EXCLUSI">
+<meta property="og:updated_time" content="2016-10-23T16:18:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Lock">
+<meta name="twitter:description" content="锁定的几种常见模式
+
+
+ROW SHARE: 行共享锁，在锁定期间允许其他事物并发对表进行各种操作， 但不允许任何事务对同一张表进行独占操作（禁止排他锁）；
+ROW EXCLUSIVE: 行排他锁，允许用户进行任何操作， 与行共享锁不同的是，它不能防止其他事务对同一张表进行手工锁定或独占操作；
+SHARE: 共享锁，其他事务只允许执行查询操作，不能执行修改操作；
+SHARE ROW EXCLUSI">
     
     
         
@@ -39,7 +61,7 @@
 
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">Hexo</a>
@@ -57,7 +79,7 @@
             <!-- Define author's picture -->
 
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
         
@@ -179,29 +201,24 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
                 
-    <section class="postShorten-group main-content-wrap">
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
     
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Exception/">
-                            PL/SQL (Exception)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-23T23:36:50+08:00">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Lock
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2016-10-24T00:02:22+08:00">
 	
-		    Oct 23, 2016
+		    Oct 24, 2016
     	
     </time>
     
@@ -213,76 +230,91 @@
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <h6 id="toc_1">1）处理sql异常</h6><br><p><img src="/imgs/14771070082709/14771070603795.jpg" alt=""/>￼</p><br>
-                    
-                        <a href="/2016/10/23/PL-SQL-Exception/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Data-Type/">
-                            PL/SQL (Data Type)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-23T23:20:32+08:00">
-	
-		    Oct 23, 2016
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/oracle/">oracle</a>
-
-
-    
 </div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <h5 id="toc_0">锁定的几种常见模式</h5>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <h6 id="toc_1">%ROWTYPE声明变量类型</h6>
+<p><ul></ul></p>
+<p><li>ROW SHARE: 行共享锁，在锁定期间允许其他事物并发对表进行各种操作， 但不允许任何事务对同一张表进行独占操作（禁止排他锁）；</li></p>
+<p><li>ROW EXCLUSIVE: 行排他锁，允许用户进行任何操作， 与行共享锁不同的是，它不能防止其他事务对同一张表进行手工锁定或独占操作；</li></p>
+<p><li>SHARE: 共享锁，其他事务只允许执行查询操作，不能执行修改操作；</li></p>
+<p><li>SHARE ROW EXCLUSIVE: 共享排他锁，允许任何用户进行查询操作，但不允许其他用户使用共享锁，SELECT FOR UPDATE就是共享排他锁的常见应用；</li></p>
+<p><li>EXCLUSIVE：排它锁，事务将以独占方式锁定表，其他用户允许查询，但是不能修改也不能设置任何的锁。 </li><br><br><a id="more"></a></p>
 
-<p><code>将表中的一行记录设置到了ROWTYPE类型的变量中，并可以利用‘rowtype 变量.表字段’的方式取得表中每行的对应列的数据：</code><br/><br><img src="/imgs/14767177479457/14767179352048.jpg" alt=""/>￼</p><br>
-                    
-                        <a href="/2016/10/23/PL-SQL-Data-Type/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
             
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/lock/">lock</a> <a class="tag tag--primary tag--small t-link" href="/tags/oracle/">oracle</a>
+
+            </div>
         
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/24/Unlock-Steps/"  data-tooltip="Unlock Steps">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/23/Oracle-Index/" data-tooltip="Oracle Index">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/24/Lock/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/24/Lock/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/24/Lock/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
         
-        <li class="pagination-number">page 1 of 1</li>
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+            
+        
+    </div>
+</article>
+
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -292,6 +324,84 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/24/Unlock-Steps/"  data-tooltip="Unlock Steps">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/23/Oracle-Index/" data-tooltip="Oracle Index">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/24/Lock/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/24/Lock/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/24/Lock/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/24/Lock/">
+                <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/24/Lock/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/24/Lock/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
             
         </div>
         
@@ -528,6 +638,8 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
 <!--SCRIPTS END-->
+
+    
 
 
 

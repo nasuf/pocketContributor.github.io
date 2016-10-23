@@ -6,17 +6,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hexo">
-    <title>Tag: pl/sql - Hexo</title>
+    <title>Unlock Steps - Hexo</title>
     <meta name="author" content="John Doe">
     
     
     
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/pl-sql/index.html">
+    <meta name="description" content="解除锁定步骤
+
+第一个session：1select * from emp where deptno = 10 for update;
+第二个session：1select * from emp where deptno = 10 for update;">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Unlock Steps">
+<meta property="og:url" content="http://yoursite.com/2016/10/24/Unlock-Steps/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="解除锁定步骤
+
+第一个session：1select * from emp where deptno = 10 for update;
+第二个session：1select * from emp where deptno = 10 for update;">
+<meta property="og:image" content="http://yoursite.com/imgs/14756739320415/14756756464515.jpg">
+<meta property="og:image" content="http://yoursite.com/imgs/14756739320415/14756758502842.jpg">
+<meta property="og:image" content="http://yoursite.com/imgs/14756739320415/14756760288304.jpg">
+<meta property="og:updated_time" content="2016-10-23T16:14:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Unlock Steps">
+<meta name="twitter:description" content="解除锁定步骤
+
+第一个session：1select * from emp where deptno = 10 for update;
+第二个session：1select * from emp where deptno = 10 for update;">
+<meta name="twitter:image" content="http://yoursite.com/imgs/14756739320415/14756756464515.jpg">
     
     
         
@@ -39,7 +56,7 @@
 
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">Hexo</a>
@@ -57,7 +74,7 @@
             <!-- Define author's picture -->
 
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
         
@@ -179,29 +196,24 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
                 
-    <section class="postShorten-group main-content-wrap">
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
     
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Exception/">
-                            PL/SQL (Exception)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-23T23:36:50+08:00">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Unlock Steps
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2016-10-24T00:06:29+08:00">
 	
-		    Oct 23, 2016
+		    Oct 24, 2016
     	
     </time>
     
@@ -213,76 +225,90 @@
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <h6 id="toc_1">1）处理sql异常</h6><br><p><img src="/imgs/14771070082709/14771070603795.jpg" alt=""/>￼</p><br>
-                    
-                        <a href="/2016/10/23/PL-SQL-Exception/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Data-Type/">
-                            PL/SQL (Data Type)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-23T23:20:32+08:00">
-	
-		    Oct 23, 2016
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/oracle/">oracle</a>
-
-
-    
 </div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <h4 id="toc_0">解除锁定步骤</h4>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <h6 id="toc_1">%ROWTYPE声明变量类型</h6>
+<p></p><h6 id="toc_1">第一个session：</h6><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> deptno = <span class="number">10</span> <span class="keyword">for</span> <span class="keyword">update</span>;</div></pre></td></tr></table></figure><p></p>
+<p></p><h6 id="toc_2">第二个session：</h6><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> deptno = <span class="number">10</span> <span class="keyword">for</span> <span class="keyword">update</span>;</div></pre></td></tr></table></figure><p></p>
+<a id="more"></a>
+<p></p><h6 id="toc_3">此时程序已经出现了锁定，查看数据库中的锁定情况（使用sys账户登录查询）：</h6><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> session_id,oracle_username,process <span class="keyword">from</span> v$locked_object;</div></pre></td></tr></table></figure><p></p>
+<p><img src="/imgs/14756739320415/14756756464515.jpg" alt="">￼</p><br><h6 id="toc_4">通过查询可以发现，此处有一个死锁信息，而死锁的session_id为13和69；但是要想结束死锁还需要序列号serial#, 因此继续查询：</h6><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> <span class="keyword">sid</span>, <span class="built_in">serial</span>#,username,lockwait,<span class="keyword">status</span> <span class="keyword">from</span> v$<span class="keyword">session</span> <span class="keyword">where</span> <span class="keyword">sid</span> <span class="keyword">in</span> (<span class="number">13</span>,<span class="number">69</span>);</div></pre></td></tr></table></figure><br><br><p><img src="/imgs/14756739320415/14756758502842.jpg" alt="">￼</p><br><h6 id="toc_5">可以发现此时正在等待的session的sid为13，serial#为385，因此执行以下语句解除死锁状态：</h6><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alter system kill session &amp;#39;13,385&amp;#39;;</div></pre></td></tr></table></figure><br><br><h6 id="toc_6">此时被锁定的session窗口出现如下提示信息：</h6><br><p><img src="/imgs/14756739320415/14756760288304.jpg" alt="">￼</p>
 
-<p><code>将表中的一行记录设置到了ROWTYPE类型的变量中，并可以利用‘rowtype 变量.表字段’的方式取得表中每行的对应列的数据：</code><br/><br><img src="/imgs/14767177479457/14767179352048.jpg" alt=""/>￼</p><br>
-                    
-                        <a href="/2016/10/23/PL-SQL-Data-Type/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
             
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/lock/">lock</a> <a class="tag tag--primary tag--small t-link" href="/tags/oracle/">oracle</a>
+
+            </div>
         
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/24/Row-Line-Convert/"  data-tooltip="Row-Line-Convert">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/24/Lock/" data-tooltip="Lock">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/24/Unlock-Steps/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/24/Unlock-Steps/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/24/Unlock-Steps/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
         
-        <li class="pagination-number">page 1 of 1</li>
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+            
+        
+    </div>
+</article>
+
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -292,6 +318,84 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/24/Row-Line-Convert/"  data-tooltip="Row-Line-Convert">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/24/Lock/" data-tooltip="Lock">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/24/Unlock-Steps/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/24/Unlock-Steps/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/24/Unlock-Steps/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/24/Unlock-Steps/">
+                <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/24/Unlock-Steps/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/24/Unlock-Steps/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
             
         </div>
         
@@ -528,6 +632,8 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
 <!--SCRIPTS END-->
+
+    
 
 
 

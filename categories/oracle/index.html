@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hexo">
-    <title>Tag: pl/sql - Hexo</title>
+    <title>Category: oracle - Hexo</title>
     <meta name="author" content="John Doe">
     
     
     
     <meta property="og:type" content="blog">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/pl-sql/index.html">
+<meta property="og:url" content="http://yoursite.com/categories/oracle/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
@@ -193,6 +193,239 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
+                        <a class="link-unstyled" href="/2016/10/24/Row-Line-Convert/">
+                            Row-Line-Convert
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-24T00:20:44+08:00">
+	
+		    Oct 24, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h2 id="toc_0">行转列</h2>
+
+<blockquote><br><p>查询每个部门中各个职位的总工资</p><br></blockquote>
+
+<p><h5 id="toc_2">1) 利用DECODE函数</h5><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">select deptno,</div><div class="line">    sum(decode(job,&amp;#39;PRESIDENT&amp;#39;,sal,0)) PRESIDENT_JOB,</div><div class="line">    sum(decode(job,&amp;#39;MANAGER&amp;#39;,sal,0)) MANAGER_JOB,</div><div class="line">    sum(decode(job,&amp;#39;ANALYST&amp;#39;,sal,0)) ANALYST_JOB,</div><div class="line">    sum(decode(job,&amp;#39;CLERK&amp;#39;,sal,0)) CLERK_JOB,</div><div class="line">    sum(decode(job,&amp;#39;SALESMAN&amp;#39;,sal,0)) SALESMAN_JOB</div><div class="line">from emp</div><div class="line">group by deptno;</div></pre></td></tr></table></figure></p>
+                    
+                        <a href="/2016/10/24/Row-Line-Convert/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/24/Unlock-Steps/">
+                            Unlock Steps
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-24T00:06:29+08:00">
+	
+		    Oct 24, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h4 id="toc_0">解除锁定步骤</h4>
+
+<p><h6 id="toc_1">第一个session：</h6><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> deptno = <span class="number">10</span> <span class="keyword">for</span> <span class="keyword">update</span>;</div></pre></td></tr></table></figure></p>
+<p><h6 id="toc_2">第二个session：</h6><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> deptno = <span class="number">10</span> <span class="keyword">for</span> <span class="keyword">update</span>;</div></pre></td></tr></table></figure></p>
+                    
+                        <a href="/2016/10/24/Unlock-Steps/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/24/Lock/">
+                            Lock
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-24T00:02:22+08:00">
+	
+		    Oct 24, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h5 id="toc_0">锁定的几种常见模式</h5>
+
+<p><ul></p>
+<p><li>ROW SHARE: 行共享锁，在锁定期间允许其他事物并发对表进行各种操作， 但不允许任何事务对同一张表进行独占操作（禁止排他锁）；</li></p>
+<p><li>ROW EXCLUSIVE: 行排他锁，允许用户进行任何操作， 与行共享锁不同的是，它不能防止其他事务对同一张表进行手工锁定或独占操作；</li></p>
+<p><li>SHARE: 共享锁，其他事务只允许执行查询操作，不能执行修改操作；</li></p>
+<p><li>SHARE ROW EXCLUSIVE: 共享排他锁，允许任何用户进行查询操作，但不允许其他用户使用共享锁，SELECT FOR UPDATE就是共享排他锁的常见应用；</li></p>
+<p><li>EXCLUSIVE：排它锁，事务将以独占方式锁定表，其他用户允许查询，但是不能修改也不能设置任何的锁。 </li><br></ul><br>
+                    
+                        <a href="/2016/10/24/Lock/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/23/Oracle-Index/">
+                            Oracle Index
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-23T23:58:41+08:00">
+	
+		    Oct 23, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h4 id="toc_1">1）使用自动跟踪功能</h4>
+
+<h6 id="toc_2">使用sys用户登录</h6><br><p><code>set autotrace on;</code><br/><br><code>select <em> from emp where sal &gt; 1500;</code></p><br>
+                    
+                        <a href="/2016/10/23/Oracle-Index/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/23/Oracle-User-Management/">
+                            Oracle User Management
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-23T23:45:05+08:00">
+	
+		    Oct 23, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h5 id="toc_1">创建用户</h5>
+
+<p><code>create user c##mldnuser identified by java_android<br/><br>default tablespace mldn_data temporary tablespace mldn_temp<br/><br>quota 30M on mldn_data quota 20M on users<br/><br>account unlock password expire;</code></p><br>
+                    
+                        <a href="/2016/10/23/Oracle-User-Management/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
                         <a class="link-unstyled" href="/2016/10/23/PL-SQL-Exception/">
                             PL/SQL (Exception)
                         </a>
@@ -283,6 +516,7 @@
 </div>
 
 </section>
+
 
 
                 <footer id="footer" class="main-content-wrap">

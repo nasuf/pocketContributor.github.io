@@ -187,7 +187,195 @@
     <section class="postShorten-group main-content-wrap">
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/24/Row-Line-Convert/">
+                            Row-Line-Convert
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-24T00:20:44+08:00">
+	
+		    Oct 24, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h2 id="toc_0">行转列</h2>
+
+<blockquote><br><p>查询每个部门中各个职位的总工资</p><br></blockquote>
+
+<p><h5 id="toc_2">1) 利用DECODE函数</h5><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">select deptno,</div><div class="line">    sum(decode(job,&amp;#39;PRESIDENT&amp;#39;,sal,0)) PRESIDENT_JOB,</div><div class="line">    sum(decode(job,&amp;#39;MANAGER&amp;#39;,sal,0)) MANAGER_JOB,</div><div class="line">    sum(decode(job,&amp;#39;ANALYST&amp;#39;,sal,0)) ANALYST_JOB,</div><div class="line">    sum(decode(job,&amp;#39;CLERK&amp;#39;,sal,0)) CLERK_JOB,</div><div class="line">    sum(decode(job,&amp;#39;SALESMAN&amp;#39;,sal,0)) SALESMAN_JOB</div><div class="line">from emp</div><div class="line">group by deptno;</div></pre></td></tr></table></figure></p>
+                    
+                        <a href="/2016/10/24/Row-Line-Convert/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/24/Unlock-Steps/">
+                            Unlock Steps
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-24T00:06:29+08:00">
+	
+		    Oct 24, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h4 id="toc_0">解除锁定步骤</h4>
+
+<p><h6 id="toc_1">第一个session：</h6><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> deptno = <span class="number">10</span> <span class="keyword">for</span> <span class="keyword">update</span>;</div></pre></td></tr></table></figure></p>
+<p><h6 id="toc_2">第二个session：</h6><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> deptno = <span class="number">10</span> <span class="keyword">for</span> <span class="keyword">update</span>;</div></pre></td></tr></table></figure></p>
+                    
+                        <a href="/2016/10/24/Unlock-Steps/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/24/Lock/">
+                            Lock
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-24T00:02:22+08:00">
+	
+		    Oct 24, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h5 id="toc_0">锁定的几种常见模式</h5>
+
+<p><ul></p>
+<p><li>ROW SHARE: 行共享锁，在锁定期间允许其他事物并发对表进行各种操作， 但不允许任何事务对同一张表进行独占操作（禁止排他锁）；</li></p>
+<p><li>ROW EXCLUSIVE: 行排他锁，允许用户进行任何操作， 与行共享锁不同的是，它不能防止其他事务对同一张表进行手工锁定或独占操作；</li></p>
+<p><li>SHARE: 共享锁，其他事务只允许执行查询操作，不能执行修改操作；</li></p>
+<p><li>SHARE ROW EXCLUSIVE: 共享排他锁，允许任何用户进行查询操作，但不允许其他用户使用共享锁，SELECT FOR UPDATE就是共享排他锁的常见应用；</li></p>
+<p><li>EXCLUSIVE：排它锁，事务将以独占方式锁定表，其他用户允许查询，但是不能修改也不能设置任何的锁。 </li><br></ul><br>
+                    
+                        <a href="/2016/10/24/Lock/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/10/23/Oracle-Index/">
+                            Oracle Index
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-10-23T23:58:41+08:00">
+	
+		    Oct 23, 2016
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h4 id="toc_1">1）使用自动跟踪功能</h4>
+
+<h6 id="toc_2">使用sys用户登录</h6><br><p><code>set autotrace on;</code><br/><br><code>select <em> from emp where sal &gt; 1500;</code></p><br>
+                    
+                        <a href="/2016/10/23/Oracle-Index/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
+                        
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
         <div class="postShorten-wrap">
             
             <div class="postShorten-header">
@@ -205,62 +393,25 @@
     	
     </time>
     
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
 </div>
 
             </div>
             
-                <div class="postShorten-content" itemprop="articleBody">
-                    <a id="more"></a>
-<h5 id="toc_1">创建用户</h5>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h5 id="toc_1">创建用户</h5>
 
-<p><code>create user c##mldnuser<br><br>identified by java_android<br><br>default tablespace mldn_data<br><br>temporary tablespace mldn_temp<br><br>quota 30M on mldn_data<br><br>quota 20M on users<br><br>account unlock<br><br>password expire;</code></p>
-
-<h5 id="toc_2">配置说明：</h5>
-
-<p><code><strong>default tablespace mldn_data</strong>: 该用户默认使用的表空间；如果用户在创建数据库对象时没有指定表空间，则默认使用mldn_data表空间存储；<br><br><strong>tempporary tablespace mldn_temp</strong>: 该用户使用order by 或者group by 子句存储量过大时保存的临时表空间；<br><br><strong>quota 30M on mldn_data</strong>: 该用户在mldn_data表空间上最多使用30MB大小；<br><br><strong>quota 20M on users</strong>: 该用户在users表空间上最多使用20MB大小；<br><br><strong>account unlock</strong>: 该用户默认为活动账户；<br><br><strong>password expire</strong>: 用户登录后需要强制用户修改密码；</code></p>
-
-<h5 id="toc_3">查看用户信息</h5>
-
-<p><code>select username,user_id,default_tablespace,temporary_tablespace,created,lock_date,profile from dba_users where username=&#39;c##mldnuser&#39;;</code></p>
-
-<h5 id="toc_4">修改用户密码</h5>
-
-<p><code>alter user c##mldnuser identified by hellojava;</code></p>
-
-<h5 id="toc_5">控制用户锁定</h5>
-
-<p><code>alter user c##mldnuser account lock;</code></p>
-
-<h5 id="toc_6">让用户密码失效</h5>
-
-<p><code>alter user c##mldnuser password expire;</code></p>
-
-<h5 id="toc_7">删除用户</h5>
-
-<p><code>drop user c##mldnuser;</code></p>
-
-<h5 id="toc_8">为用户授权</h5>
-
-<p><code>grant create session to c##mldnuser;<br><br>grant create table, create sequence, create view to c##mldnuser with admin option;  #with admin option子句表示该用户可以将其权限授予其他用户；</code></p>
-
-<h5 id="toc_9">查询用户权限</h5>
-
-<p><code>select * from dba_sys_privs where grantee in (&#39;c##mldnuser&#39;) order by grantee desc;</code></p>
-
-<h5 id="toc_10">撤销用户权限</h5>
-
-<p><code>revoke create table, create view from c##mldnuser;</code></p>
-
-
+<p><code>create user c##mldnuser identified by java_android<br/><br>default tablespace mldn_data temporary tablespace mldn_temp<br/><br>quota 30M on mldn_data quota 20M on users<br/><br>account unlock password expire;</code></p><br>
                     
+                        <a href="/2016/10/23/Oracle-User-Management/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
                         
-                    
-                    
-                        <p>
-                            <a href="/2016/10/23/Oracle-User-Management/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
                     
                 </div>
             
@@ -269,14 +420,14 @@
     </article>
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
         <div class="postShorten-wrap">
             
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
                         <a class="link-unstyled" href="/2016/10/23/PL-SQL-Exception/">
-                            PL/SQL(Exception)
+                            PL/SQL (Exception)
                         </a>
                     
                 </h1>
@@ -287,46 +438,23 @@
     	
     </time>
     
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
 </div>
 
             </div>
             
-                <div class="postShorten-content" itemprop="articleBody">
-                    <a id="more"></a>
-<h6 id="toc_1">1）处理sql异常</h6><br><p><img src="/imgs/14771070082709/14771070603795.jpg" alt="">￼</p><br><br><h6 id="toc_2">2）使用others捕获所有异常</h6>
-
-<p><img src="/imgs/14771070082709/14771074180886.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771074527073.jpg" alt="">￼</p>
-
-<h6 id="toc_3">3）用户自定义异常</h6>
-
-<p><code>方式一：在声明块中声明EXCEPTION对象，此方式有两种选择：<br><br>1&gt; 声明异常对象并用名称来引用它，此方式使用普遍的others异常捕获用户定义的异常；<br><br>2&gt;声明异常对象并将它与有效的Oracle错误代码映射，需要编写单独的WHEN语句块捕获。<br><br>方式二：在执行块中构建动态异常，通过RAISE_APPLICATION_ERROR函数可以构建动态异常。在触发动态异常时，可使用-20000 ~ -20999范围的数字。如果使用动态异常，可以在运行时指派错误消息。</code></p>
-
-<h6 id="toc_4">基本方式</h6>
-
-<p><img src="/imgs/14771070082709/14771082553188.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771082812057.jpg" alt="">￼<br><br><code>在默认情况下，所有用户定义的异常都只有一个SQLCODE，其内容为1,另外用户自定义异常尚未设置异常名称，所以错误信息显示内容为User-Defined Exception</code></p>
-
-<h6 id="toc_5">为自定义异常设置代码</h6>
-
-<p><img src="/imgs/14771070082709/14771085714394.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771085849106.jpg" alt="">￼</p>
-
-<h6 id="toc_6">构建动态异常</h6>
-
-<p><img src="media/14771070082709/14771088687045.jpg" alt="">￼<br><br><img src="/imgs/14771070082709/14771088893755.jpg" alt="">￼</p>
-
-<p><code>如果此时捕获的不是异常变量，而使用others操作的话，那么即使不编写PRAGMA EXCEPTION_INIT(v_myexp,-20789);也没有问题：</code><br><br><img src="/imgs/14771070082709/14771092340708.jpg" alt="">￼</p>
-
-<p><img src="/imgs/14771070082709/14771091219240.jpg" alt="">￼</p>
-
-
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h6 id="toc_1">1）处理sql异常</h6><br><p><img src="/imgs/14771070082709/14771070603795.jpg" alt=""/>￼</p><br>
                     
+                        <a href="/2016/10/23/PL-SQL-Exception/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
                         
-                    
-                    
-                        <p>
-                            <a href="/2016/10/23/PL-SQL-Exception/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
                     
                 </div>
             
@@ -335,7 +463,7 @@
     </article>
     
     
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
         <div class="postShorten-wrap">
             
             <div class="postShorten-header">
@@ -353,56 +481,25 @@
     	
     </time>
     
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/oracle/">oracle</a>
+
+
+    
 </div>
 
             </div>
             
-                <div class="postShorten-content" itemprop="articleBody">
-                    <a id="more"></a>
-<h6 id="toc_1">%ROWTYPE声明变量类型</h6>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    <h6 id="toc_1">%ROWTYPE声明变量类型</h6>
 
-<p><code>将表中的一行记录设置到了ROWTYPE类型的变量中，并可以利用‘rowtype 变量.表字段’的方式取得表中每行的对应列的数据：</code><br><br><img src="/imgs/14767177479457/14767179352048.jpg" alt="">￼</p>
-
-<h5 id="toc_2">%TYPE声明变量类型</h5>
-
-<p><code>声明某个变量与指定数据表中的某一列的数据类型一样，使用‘变量定义 表名称.字段名称%TYPE&#39;的格式：</code><br><br><img src="/imgs/14767177479457/14767186098179.jpg" alt="">￼</p>
-
-<h5 id="toc_3">运算符</h5>
-
-<p><img src="/imgs/14767177479457/14767190183039.jpg" alt="">￼</p>
-
-<h5 id="toc_4">数据类型</h5>
-
-<h6 id="toc_5">NUMBER</h6>
-
-<p><code>NUMBER可以定义整形NUMBER(n), 也可以定义浮点型NUMBER(n,m)，后者表示一共有n位，其中m位小数；</code></p>
-
-<h6 id="toc_6">BINARY_INTEGER &amp; PLS_INTEGER</h6>
-
-<p><code>两者采用二进制的补码形式存储，而NUMBER采用十进制进行存储，使用时先转为二进制再进行计算，所以前者比NUMBER性能更高；</code></p>
-
-<h6 id="toc_7">BINARY_FLOAT &amp; BINARY_DOUBLE</h6>
-
-<p><code>Oracle 10g后引入，比NUMBER节约空间，表示的范围更大，直接采用二进制方式存储；声明方式：<br><br>    v_float BINARY_FLOAT := 8909.82F;<br><br>    v_double BINARY_DOUBLE := 92884.23D;</code></p>
-
-<h6 id="toc_8">CHAR &amp; VARCHAR2</h6>
-
-<p><code>CHAR类型使用定长方式保存字符串，如果用户为其设置的内容不足其定义长度，则会自动补充空格；VARCHAR2是变长字符串，如果为其设置的内容不足其长度，不会为其补充内容；</code></p>
-
-<h6 id="toc_9">NCHAR &amp; NVARCHAR2</h6>
-
-<p><code>两者操作特点与CHAR和VARCHAR2一样，只是两者保存的数据为UNICODE编码，即中文或英文都会变为十六进制编码保存。使用UNICODE编码的方便之处是统一了字符与汉字的长度，每一位中文都只占一位；但同时，由于所有的字母都会按照十六进制保存，所以在某种程度上讲也会浪费空间；</code></p>
-
-
+<p><code>将表中的一行记录设置到了ROWTYPE类型的变量中，并可以利用‘rowtype 变量.表字段’的方式取得表中每行的对应列的数据：</code><br/><br><img src="/imgs/14767177479457/14767179352048.jpg" alt=""/>￼</p><br>
                     
+                        <a href="/2016/10/23/PL-SQL-Data-Type/" class="postShorten-excerpt_link link">
+                            Continue reading
+                        </a>
                         
-                    
-                    
-                        <p>
-                            <a href="/2016/10/23/PL-SQL-Data-Type/#post-footer" class="postShorten-excerpt_link link">
-                                Comment and share
-                            </a>
-                        </p>
                     
                 </div>
             
@@ -507,7 +604,9 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
+                        <div class="media-content hide-xs font-merryweather"><h6 id="toc_1">%ROWTYPE声明变量类型</h6>
+
+<p><code>将表中的一行记录设置到了ROWTYPE类型的变量中，并可以利用‘rowtype 变量.表字段’的方式取得表中每行的对应列的数据：</code><br/><br><img src="/imgs/14767177479457/14767179352048.jpg" alt=""/>￼</p><br></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -517,7 +616,7 @@
                     
                     <div class="media-body">
                         <a class="link-unstyled" href="http://yoursite.com/2016/10/23/PL-SQL-Exception/">
-                            <h3 class="media-heading">PL/SQL(Exception)</h3>
+                            <h3 class="media-heading">PL/SQL (Exception)</h3>
                         </a>
                         <span class="media-meta">
                             <span class="media-date text-small">
@@ -526,7 +625,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
+                        <div class="media-content hide-xs font-merryweather"><h6 id="toc_1">1）处理sql异常</h6><br><p><img src="/imgs/14771070082709/14771070603795.jpg" alt=""/>￼</p><br></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -545,7 +644,101 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
+                        <div class="media-content hide-xs font-merryweather"><h5 id="toc_1">创建用户</h5>
+
+<p><code>create user c##mldnuser identified by java_android<br/><br>default tablespace mldn_data temporary tablespace mldn_temp<br/><br>quota 30M on mldn_data quota 20M on users<br/><br>account unlock password expire;</code></p><br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2016/10/23/Oracle-Index/">
+                            <h3 class="media-heading">Oracle Index</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 23, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="toc_1">1）使用自动跟踪功能</h4>
+
+<h6 id="toc_2">使用sys用户登录</h6><br><p><code>set autotrace on;</code><br/><br><code>select <em> from emp where sal &gt; 1500;</code></p><br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2016/10/24/Lock/">
+                            <h3 class="media-heading">Lock</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 24, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h5 id="toc_0">锁定的几种常见模式</h5>
+
+<p><ul></p>
+<p><li>ROW SHARE: 行共享锁，在锁定期间允许其他事物并发对表进行各种操作， 但不允许任何事务对同一张表进行独占操作（禁止排他锁）；</li></p>
+<p><li>ROW EXCLUSIVE: 行排他锁，允许用户进行任何操作， 与行共享锁不同的是，它不能防止其他事务对同一张表进行手工锁定或独占操作；</li></p>
+<p><li>SHARE: 共享锁，其他事务只允许执行查询操作，不能执行修改操作；</li></p>
+<p><li>SHARE ROW EXCLUSIVE: 共享排他锁，允许任何用户进行查询操作，但不允许其他用户使用共享锁，SELECT FOR UPDATE就是共享排他锁的常见应用；</li></p>
+<p><li>EXCLUSIVE：排它锁，事务将以独占方式锁定表，其他用户允许查询，但是不能修改也不能设置任何的锁。 </li><br></ul><br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2016/10/24/Unlock-Steps/">
+                            <h3 class="media-heading">Unlock Steps</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 24, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h4 id="toc_0">解除锁定步骤</h4>
+
+<p><h6 id="toc_1">第一个session：</h6><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> deptno = <span class="number">10</span> <span class="keyword">for</span> <span class="keyword">update</span>;</div></pre></td></tr></table></figure></p>
+<p><h6 id="toc_2">第二个session：</h6><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> deptno = <span class="number">10</span> <span class="keyword">for</span> <span class="keyword">update</span>;</div></pre></td></tr></table></figure></p></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://yoursite.com/2016/10/24/Row-Line-Convert/">
+                            <h3 class="media-heading">Row-Line-Convert</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    Oct 24, 2016
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><h2 id="toc_0">行转列</h2>
+
+<blockquote><br><p>查询每个部门中各个职位的总工资</p><br></blockquote>
+
+<p><h5 id="toc_2">1) 利用DECODE函数</h5><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">select deptno,</div><div class="line">    sum(decode(job,&amp;#39;PRESIDENT&amp;#39;,sal,0)) PRESIDENT_JOB,</div><div class="line">    sum(decode(job,&amp;#39;MANAGER&amp;#39;,sal,0)) MANAGER_JOB,</div><div class="line">    sum(decode(job,&amp;#39;ANALYST&amp;#39;,sal,0)) ANALYST_JOB,</div><div class="line">    sum(decode(job,&amp;#39;CLERK&amp;#39;,sal,0)) CLERK_JOB,</div><div class="line">    sum(decode(job,&amp;#39;SALESMAN&amp;#39;,sal,0)) SALESMAN_JOB</div><div class="line">from emp</div><div class="line">group by deptno;</div></pre></td></tr></table></figure></p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -558,7 +751,7 @@
                 data-message-zero="no post found"
                 data-message-one="1 post found"
                 data-message-other="{n} posts found">
-                4 posts found
+                8 posts found
             </p>
         </div>
     </div>

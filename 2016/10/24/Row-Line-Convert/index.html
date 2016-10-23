@@ -6,17 +6,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hexo">
-    <title>Tag: pl/sql - Hexo</title>
+    <title>Row-Line-Convert - Hexo</title>
     <meta name="author" content="John Doe">
     
     
     
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/pl-sql/index.html">
+    <meta name="description" content="行转列
+
+查询每个部门中各个职位的总工资
+
+1) 利用DECODE函数12345678select deptno,    sum(decode(job,&amp;amp;#39;PRESIDENT&amp;amp;#39;,sal,0)) PRESIDENT_JOB,    sum(decode(job,&amp;amp;#39;MANAGER&amp;amp;#39;,sal,0)) MANAGER_JOB,    sum(d">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Row-Line-Convert">
+<meta property="og:url" content="http://yoursite.com/2016/10/24/Row-Line-Convert/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="行转列
+
+查询每个部门中各个职位的总工资
+
+1) 利用DECODE函数12345678select deptno,    sum(decode(job,&amp;amp;#39;PRESIDENT&amp;amp;#39;,sal,0)) PRESIDENT_JOB,    sum(decode(job,&amp;amp;#39;MANAGER&amp;amp;#39;,sal,0)) MANAGER_JOB,    sum(d">
+<meta property="og:image" content="http://yoursite.com/imgs/14741208052451/14750685936130.jpg">
+<meta property="og:image" content="http://yoursite.com/imgs/14741208052451/14750689623103.jpg">
+<meta property="og:image" content="http://yoursite.com/imgs/14741208052451/14750705072856.jpg">
+<meta property="og:image" content="http://yoursite.com/imgs/14741208052451/14750713156440.jpg">
+<meta property="og:image" content="http://yoursite.com/imgs/14741208052451/14750715601103.jpg">
+<meta property="og:updated_time" content="2016-10-23T16:28:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Row-Line-Convert">
+<meta name="twitter:description" content="行转列
+
+查询每个部门中各个职位的总工资
+
+1) 利用DECODE函数12345678select deptno,    sum(decode(job,&amp;amp;#39;PRESIDENT&amp;amp;#39;,sal,0)) PRESIDENT_JOB,    sum(decode(job,&amp;amp;#39;MANAGER&amp;amp;#39;,sal,0)) MANAGER_JOB,    sum(d">
+<meta name="twitter:image" content="http://yoursite.com/imgs/14741208052451/14750685936130.jpg">
     
     
         
@@ -39,7 +61,7 @@
 
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">Hexo</a>
@@ -57,7 +79,7 @@
             <!-- Define author's picture -->
 
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
         
@@ -179,29 +201,24 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
                 
-    <section class="postShorten-group main-content-wrap">
+<article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
     
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Exception/">
-                            PL/SQL (Exception)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-23T23:36:50+08:00">
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            Row-Line-Convert
+        </h1>
+    
+    <div class="post-meta">
+    <time itemprop="datePublished" datetime="2016-10-24T00:20:44+08:00">
 	
-		    Oct 23, 2016
+		    Oct 24, 2016
     	
     </time>
     
@@ -213,76 +230,99 @@
     
 </div>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <h6 id="toc_1">1）处理sql异常</h6><br><p><img src="/imgs/14771070082709/14771070603795.jpg" alt=""/>￼</p><br>
-                    
-                        <a href="/2016/10/23/PL-SQL-Exception/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
-    
-    <article class="postShorten postShorten--thumbnailimg-right" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2016/10/23/PL-SQL-Data-Type/">
-                            PL/SQL (Data Type)
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2016-10-23T23:20:32+08:00">
-	
-		    Oct 23, 2016
-    	
-    </time>
-    
-        <span>in </span>
-        
-    <a class="category-link" href="/categories/oracle/">oracle</a>
-
-
-    
 </div>
+    
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <h2 id="toc_0">行转列</h2>
 
-            </div>
-            
-                <div class="postShorten-excerpt" itemprop="articleBody">
-                    <h6 id="toc_1">%ROWTYPE声明变量类型</h6>
+<blockquote><br><p>查询每个部门中各个职位的总工资</p><br></blockquote>
 
-<p><code>将表中的一行记录设置到了ROWTYPE类型的变量中，并可以利用‘rowtype 变量.表字段’的方式取得表中每行的对应列的数据：</code><br/><br><img src="/imgs/14767177479457/14767179352048.jpg" alt=""/>￼</p><br>
-                    
-                        <a href="/2016/10/23/PL-SQL-Data-Type/" class="postShorten-excerpt_link link">
-                            Continue reading
-                        </a>
-                        
-                    
-                </div>
+<p></p><h5 id="toc_2">1) 利用DECODE函数</h5><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">select deptno,</div><div class="line">    sum(decode(job,&amp;#39;PRESIDENT&amp;#39;,sal,0)) PRESIDENT_JOB,</div><div class="line">    sum(decode(job,&amp;#39;MANAGER&amp;#39;,sal,0)) MANAGER_JOB,</div><div class="line">    sum(decode(job,&amp;#39;ANALYST&amp;#39;,sal,0)) ANALYST_JOB,</div><div class="line">    sum(decode(job,&amp;#39;CLERK&amp;#39;,sal,0)) CLERK_JOB,</div><div class="line">    sum(decode(job,&amp;#39;SALESMAN&amp;#39;,sal,0)) SALESMAN_JOB</div><div class="line">from emp</div><div class="line">group by deptno;</div></pre></td></tr></table></figure><p></p>
+<a id="more"></a>
+<p><img src="/imgs/14741208052451/14750685936130.jpg" alt="">￼</p>
+
+<p></p><h5 id="toc_3">2) 利用PIVOT()函数（oracle11g）</h5><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">select * from (select deptno,job, sal from emp)</div><div class="line">pivot(</div><div class="line">    sum(sal)</div><div class="line">    for job in (</div><div class="line">        &amp;#39;PRESIDENT&amp;#39; as PRESIDENT_JOB,</div><div class="line">        &amp;#39;MANAGER&amp;#39; as MANAGER_JOB,</div><div class="line">        &amp;#39;ANALYST&amp;#39; as ANALYST_JOB,</div><div class="line">        &amp;#39;CLERK&amp;#39; as CLERK_JOB,</div><div class="line">        &amp;#39;SALESMAN&amp;#39; as SALESMAN_JOB</div><div class="line">    )</div><div class="line">) ORDER BY deptno;</div></pre></td></tr></table></figure><p></p>
+<p><code>子查询：此处规定了在pivot()函数操作过程中，所需要使用到的数据（设置子查询确定行和列）<br><br></code><br><br><code>统计函数（列）：在转换过程中，设置要进行统计的数据列及统计函数，可以设置多个统计函数</code><br><br><code>FOR转换列名称：将子查询中返回的指定数据变为显示的列</code><br><br><img src="/imgs/14741208052451/14750689623103.jpg" alt="">￼<br><br><code>如果定义统计函数时使用了别名，那么最终生成的列名将采用字符串拼接方式显示（FOR中设置的别名_统计函数别名）：</code></p><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">select * from (select deptno,job, sal from emp)</div><div class="line">pivot(</div><div class="line">    sum(sal) as sum_sal</div><div class="line">    for job in (</div><div class="line">        &amp;#39;PRESIDENT&amp;#39; as PRESIDENT_JOB,</div><div class="line">        &amp;#39;MANAGER&amp;#39; as MANAGER_JOB,</div><div class="line">        &amp;#39;ANALYST&amp;#39; as ANALYST_JOB,</div><div class="line">        &amp;#39;CLERK&amp;#39; as CLERK_JOB,</div><div class="line">        &amp;#39;SALESMAN&amp;#39; as SALESMAN_JOB</div><div class="line">    )</div><div class="line">) ORDER BY deptno;</div></pre></td></tr></table></figure><br><br><p><img src="/imgs/14741208052451/14750705072856.jpg" alt="">￼</p>
+
+<h2 id="toc_4">列转行</h2>
+
+<p></p><h5 id="toc_5">利用unpivot()函数</h5><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">with temp as (</div><div class="line">    select * from (select deptno,job, sal from emp)</div><div class="line">    pivot(</div><div class="line">    sum(sal)</div><div class="line">    for job in (</div><div class="line">        &amp;#39;PRESIDENT&amp;#39; as PRESIDENT_JOB,</div><div class="line">        &amp;#39;MANAGER&amp;#39; as MANAGER_JOB,</div><div class="line">        &amp;#39;ANALYST&amp;#39; as ANALYST_JOB,</div><div class="line">        &amp;#39;CLERK&amp;#39; as CLERK_JOB,</div><div class="line">        &amp;#39;SALESMAN&amp;#39; as SALESMAN_JOB</div><div class="line">    )</div><div class="line">) ORDER BY deptno)</div><div class="line">select * from temp</div><div class="line">unpivot(</div><div class="line">    sal_sum for job in (</div><div class="line">        PRESIDENT_JOB as &amp;#39;PRESIDENT&amp;#39;,</div><div class="line">        MANAGER_JOB as &amp;#39;MANAGER&amp;#39;,</div><div class="line">        ANALYST_JOB as &amp;#39;ANALYST&amp;#39;,</div><div class="line">        CLERK_JOB as &amp;#39;CLERK&amp;#39;,</div><div class="line">        SALESMAN_JOB as &amp;#39;SALESMAN&amp;#39;</div><div class="line">    )</div><div class="line">) order by deptno;</div></pre></td></tr></table></figure><p></p>
+<p><img src="/imgs/14741208052451/14750713156440.jpg" alt="">￼<br><br><code>此时并没有保留null数据；可以设置INCLUDE NULL来保留（EXCLUDE NULLS为默认选项）：</code></p><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">with temp as (</div><div class="line">    select * from (select deptno,job, sal from emp)</div><div class="line">    pivot(</div><div class="line">    sum(sal)</div><div class="line">    for job in (</div><div class="line">        &amp;#39;PRESIDENT&amp;#39; as PRESIDENT_JOB,</div><div class="line">        &amp;#39;MANAGER&amp;#39; as MANAGER_JOB,</div><div class="line">        &amp;#39;ANALYST&amp;#39; as ANALYST_JOB,</div><div class="line">        &amp;#39;CLERK&amp;#39; as CLERK_JOB,</div><div class="line">        &amp;#39;SALESMAN&amp;#39; as SALESMAN_JOB</div><div class="line">    )</div><div class="line">) ORDER BY deptno)</div><div class="line">select * from temp</div><div class="line">unpivot include nulls(</div><div class="line">    sal_sum for job in (</div><div class="line">        PRESIDENT_JOB as &amp;#39;PRESIDENT&amp;#39;,</div><div class="line">        MANAGER_JOB as &amp;#39;MANAGER&amp;#39;,</div><div class="line">        ANALYST_JOB as &amp;#39;ANALYST&amp;#39;,</div><div class="line">        CLERK_JOB as &amp;#39;CLERK&amp;#39;,</div><div class="line">        SALESMAN_JOB as &amp;#39;SALESMAN&amp;#39;</div><div class="line">    )</div><div class="line">) order by deptno;</div></pre></td></tr></table></figure><br><br><p><img src="/imgs/14741208052451/14750715601103.jpg" alt="">￼</p>
+
+
             
         </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
         
-    </article>
-    
-    <div class="pagination-bar">
-    <ul class="pagination">
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/oracle/">oracle</a>
+
+            </div>
         
+        <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/24/Unlock-Steps/" data-tooltip="Unlock Steps">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/24/Row-Line-Convert/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/24/Row-Line-Convert/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/24/Row-Line-Convert/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
         
-        <li class="pagination-number">page 1 of 1</li>
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
-</section>
+
+        
+            
+        
+    </div>
+</article>
+
 
 
                 <footer id="footer" class="main-content-wrap">
@@ -292,6 +332,84 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/10/24/Unlock-Steps/" data-tooltip="Unlock Steps">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/24/Row-Line-Convert/">
+                <i class="fa fa-google-plus"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/24/Row-Line-Convert/">
+                <i class="fa fa-facebook-official"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/24/Row-Line-Convert/">
+                <i class="fa fa-twitter"></i>
+            </a>
+        </li>
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2016/10/24/Row-Line-Convert/">
+                <i class="fa fa-google-plus"></i><span>Share on Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/10/24/Row-Line-Convert/">
+                <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2016/10/24/Row-Line-Convert/">
+                <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
             
         </div>
         
@@ -528,6 +646,8 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-rt08quwts7iav5x0cfd2ym0gb5qkd1lvrsmwrakxtkhefmaaes4ywkmnjnwf.min.js"></script>
 <!--SCRIPTS END-->
+
+    
 
 
 
